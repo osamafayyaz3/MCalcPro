@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MCalcPro</string>
+    <string name="s0">ANALYZE</string>
+    <string name="s1">Cash Price</string>
+    <string name="s2">Amortization</string>
+    <string name="s3">Interest (%)</string>
+    <string name="x1">Cash Price</string>
+</resources>
