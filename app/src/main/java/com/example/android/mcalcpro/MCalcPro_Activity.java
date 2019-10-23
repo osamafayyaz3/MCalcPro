@@ -19,6 +19,8 @@ import ca.roumani.i2c.MPro;
 public class MCalcPro_Activity extends AppCompatActivity implements TextToSpeech.OnInitListener, SensorEventListener {
 
     private TextToSpeech tts;
+    public final int LIMIT_1 = 6;
+    public final int LIMIT_2 = 21;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,13 +82,13 @@ public class MCalcPro_Activity extends AppCompatActivity implements TextToSpeech
           s += String.format("%8s", "n") + String.format("%16s", "Balance");
           s += "\n\n";
 
-          for(int i = 0; i < 6; i++)
+          for(int i = 0; i < LIMIT_1; i++)
           {
               s += String.format("%8d",i) + myModel.outstandingAfter(i,"%,16.0f");
               s += "\n\n";
           }
 
-          for(int an = 10; an < 21; an += 5 )
+          for(int an = 10; an < LIMIT_2; an += 5 )
           {
               s += String.format("%8d",an)  + myModel.outstandingAfter(an,"%,16.0f");
               s += "\n\n";
